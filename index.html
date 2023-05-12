@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heloisa</title>
+    <link rel="stylesheet" href="style.css">
+    <base target="_blank">
+</head>
+<body>
+
+<h2>Site para adoração da Heloisa</h2>
+<h3>Começe sua oração agora</h3>
+<!--<img src="https://th.bing.com/th/id/OIP.Im1XB0TSXF1uTe27wDvf2QHaFj?pid=ImgDet&rs=1" alt="laço" width="80" height="80">-->
+<h4>Lugares onde estou presente</h4>
+<div class="vertical-menu">
+  <a href="#" class="active">Site</a>
+  <a href="https://instagram.com/loisarzx?igshid=MzRlODBiNWFlZA==">Instagram</a>
+  <a href="https://open.spotify.com/playlist/2l9G4giorXJKIRIfAg6mNC">Spotify</a>
+  <a href="#">Tiktok</a>
+  <a href="#">Email</a>
+</div>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://i.pinimg.com/750x/24/9b/07/249b07f753becbb5c1807c4a9f2c57dc.jpg" style="width:50%">
+      <!--<div class="text">Photo one</div>-->
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://i.pinimg.com/750x/95/94/99/95949959b2e27d6ce8c439d1ab7e4114.jpg" style="width:50%">
+      <!--<div class="text">Photo Two</div>-->
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://i.pinimg.com/750x/0f/ce/9b/0fce9be580a65b4003a2fac53987fc43.jpg" style="width:50%">
+      <!--
+        <div class="text"> Photo Three</div>-->
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+<script src="script.js" defer></script>
+</body>
+</html>
